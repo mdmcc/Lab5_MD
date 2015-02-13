@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>girl in a polka dot dress</title>
+    <meta charset="utf-8"/>
+     <style>
+      #canv1 {
+          padding-left: 0;
+          padding-right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          width: 800px;
+          border:1px solid #000000;
+          -webkit-box-shadow: 6px 10px 13px -4px rgba(0,0,0,0.74);
+          -moz-box-shadow: 6px 10px 13px -4px rgba(0,0,0,0.74);
+          box-shadow: 6px 10px 13px -4px rgba(0,0,0,0.74);
+      }
+    </style>
+  </head>
+  <body>
+      <canvas id="canv1" width="640" height="480" >
+      </canvas>
+      
+        <script>
+        var can = document.getElementById("canv1");
+        var ctx = can.getContext("2d");
+
+          // ground
+          ctx.fillStyle = "#389539";
+          ctx.fillRect(0,260,800,400);
+
+          // sky
+          ctx.fillStyle = "#83CAF2";
+          ctx.fillRect(0,0,800,260);
+
+          // bubble
+          ctx.beginPath();
+          ctx.moveTo(425, 25);
+          ctx.quadraticCurveTo(370, 25, 370, 62.5);
+          ctx.quadraticCurveTo(370, 100, 400, 100);
+          ctx.quadraticCurveTo(400, 120, 370, 125);
+          ctx.quadraticCurveTo(410, 120, 415, 100);
+          ctx.quadraticCurveTo(475, 100, 475, 62.5);
+          ctx.quadraticCurveTo(475, 25, 425, 25);
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fill();
+          ctx.stroke();
+
+          // words
+          ctx.font = "16pt Garamond"
+          ctx.fillStyle = "#000000"
+          ctx.fillText("sup dawg", 385,70);
+
+          // bird1
+          ctx.beginPath();
+          ctx.arc(62,50,20,100,255,2*Math.PI,false);
+          ctx.arc(30,50,20,100,255,2*Math.PI,false);
+          ctx.stroke();
+
+          // bird2
+          ctx.beginPath();
+          ctx.arc(552,175,20,100,255,2*Math.PI,false);
+          ctx.arc(520,175,20,100,255,2*Math.PI,false);
+          ctx.stroke();
+
+          // long hair
+          ctx.fillStyle = "#953E1D";
+          ctx.fillRect(252,88,96,88);
+          ctx.strokeRect(252,88,96,88);
+
+          // left leg
+          ctx.fillStyle = "#FFEBC6";
+          ctx.fillRect(280,245,20,60);
+          ctx.strokeRect(280,245,20,60);
+
+          // right leg
+          ctx.fillRect(300,245,20,60);
+          ctx.strokeRect(300,245,20,60);
+
+          // left foot
+          ctx.beginPath();
+          ctx.arc(285,310,15,0,600,2*Math.PI);
+          ctx.fillStyle = "#C20705";
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          //right foot
+          ctx.beginPath();
+          ctx.arc(315,310,15,0,600,2*Math.PI);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          // skirt
+          ctx.beginPath();
+          ctx.moveTo(300,150);
+          ctx.lineTo(220,250);
+          ctx.lineTo(380,250);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          // torso
+          ctx.fillRect(260,100,80,100);
+          ctx.strokeRect(260,100,80,100);
+
+          // spots row1
+          ctx.fillStyle = "#FFFFFF"
+          ctx.beginPath();
+          ctx.arc(278,160,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(300,160,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(320,160,5,0,2*Math.PI,true);
+          ctx.fill();
+          // row2
+          ctx.beginPath();
+          ctx.arc(278,175,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(300,175,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(320,175,5,0,2*Math.PI,true);
+          ctx.fill();
+          // row3
+          ctx.beginPath();
+          ctx.arc(278,190,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(300,190,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(320,190,5,0,2*Math.PI,true);
+          ctx.fill();
+          // row4
+          ctx.beginPath();
+          ctx.arc(270,210,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(290,210,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(310,210,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(330,210,5,0,2*Math.PI,true);
+          ctx.fill();
+          // row5
+          ctx.beginPath();
+          ctx.arc(260,225,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(280,225,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(300,225,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(320,225,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(340,225,5,0,2*Math.PI,true);
+          ctx.fill();
+          // row6
+          ctx.beginPath();
+          ctx.arc(250,240,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(270,240,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(290,240,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(310,240,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(330,240,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(350,240,5,0,2*Math.PI,true);
+          ctx.fill();
+
+
+          // left arm
+          ctx.beginPath();
+          ctx.moveTo(265,145);
+          ctx.lineTo(300,180);
+          ctx.lineTo(265,160);
+          ctx.closePath();
+          ctx.fillStyle = "#FFEBC6";
+          ctx.fill();
+          ctx.stroke();
+
+          // right arm
+          ctx.beginPath();
+          ctx.moveTo(335,145);
+          ctx.lineTo(300,180);
+          ctx.lineTo(335,160);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          // face
+          ctx.beginPath();
+          ctx.arc(300, 100, 50, 0, 2*Math.PI);
+          ctx.fill();
+          ctx.stroke();
+
+          // mouth
+          ctx.moveTo(310,120);
+          ctx.arc(300,120,10,0,Math.PI,false); 
+          ctx.stroke();
+          
+          // left eye
+          ctx.beginPath(293,99);
+          ctx.arc(293,103,4,0, 2*Math.PI,true);
+          ctx.fillStyle ="#000000"
+          ctx.fill();
+          
+          // right eye
+          ctx.beginPath(308,99);
+          ctx.arc(308,103,4,0, 2*Math.PI,true);
+          ctx.fill();
+
+          // hair
+          ctx.beginPath(300,120);
+          ctx.arc(300,100, 50, 0, 550, 2*Math.PI)
+          ctx.fillStyle ="#953E1D";
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          //bow
+          ctx.fillStyle= "#FFFFFF";
+          ctx.beginPath();
+          ctx.moveTo(315,60);
+          ctx.lineTo(330,75);
+          ctx.lineTo(310,85);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(345,60);
+          ctx.lineTo(350,85);
+          ctx.lineTo(328,75);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(330,75,5,0,2*Math.PI,true);
+          ctx.fill();
+          ctx.stroke();
+          
+
+         </script>
+  </body>
+</html>
