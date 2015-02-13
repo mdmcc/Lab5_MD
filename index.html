@@ -3,21 +3,79 @@
 <head>
 <meta charset = "UTF=8">
 <title>simple calculator</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
 
-</script>
+	#display {
+		margin-top:10px;
+		font-size: 24px;
+		color: #ff0000;
+	}
+
+</style>
 </head>
 <script>
 $(document).ready(
+	//variables for each number so it doesn't have to be in each button function
 	function(){
+		var num1 = 0;
+		var num2 = 0;
+		var total = 0;
 
-		$("#calc").click(
+		//stores the numbers to make the calc variables smaller
+		var getNumber = function(){
+			num1 = parseInt($("#num1").val());
+			num2 = parseInt($("#num2").val());
+		};
+
+		//removes display function from each button function
+		var showNumber = function(){
+			$("#display").html(total);
+		};
+
+		var add = function (){
+			getNumber();
+			total = num1 + num2;
+		};
+
+		var subt = function(){
+			getNumber();
+			total = num1 - num2;
+		};
+
+		var mult = function(){
+			getNumber();
+			total = num1 * num2;
+		};
+
+		var divi = function(){
+			getNumber();
+			total = num1 / num2;
+		};
+
+
+		$("#add").click(
 			function(){
-				var num1 = parseInt($("#num1").val());
-				var num2 = parseInt($("#num2").val());
-				var total = num1 + num2;
-				console.log(total, num1, num2);
-				$("#display").html(total);
+				add();
+				showNumber();
+			}
+		);
+		$("#subt").click(
+			function(){
+				subt();
+				showNumber();
+			}
+		);
+		$("#mult").click(
+			function(){
+				mult();
+				showNumber();
+			}
+		);
+		$("#divi").click(
+			function(){
+				divi();
+				showNumber();
 			}
 		);
 	}
@@ -30,10 +88,7 @@ $(document).ready(
 	<button id="mult">x</button>
 	<button id="divi">/</button>
 	<input id="num2" type="text" placeholder="2nd #" />
-	<button id="calc">Calculate</button>
-	<div id="display">
-	</div>
-
+	<div id="display"></div>
 
 </body>
 </html>
